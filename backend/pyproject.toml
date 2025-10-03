@@ -1,0 +1,23 @@
+# Security Configuration for Backend
+
+[tool.bandit]
+exclude_dirs = ["tests", "venv", ".venv"]
+skips = ["B101"]  # Skip assert_used test
+
+[tool.bandit.assert_used]
+skips = ["*_test.py", "*test*.py"]
+
+# Safety configuration
+[tool.safety]
+ignore = []
+short_report = false
+full_report = true
+output = "text"
+
+# Semgrep configuration
+[tool.semgrep]
+rules = [
+    "p/security-audit",
+    "p/owasp-top-ten",
+    "p/python"
+]

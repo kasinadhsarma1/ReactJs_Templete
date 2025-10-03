@@ -83,4 +83,34 @@ frontend/node_modules/.cache/default-development/3.pack
 # Environment files
 *.env
 *.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Security and secrets
+secrets/
+.secrets/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.jks
+.aws/
+.ssh/
+.gnupg/
+
+# Authentication tokens
+*token*
+*credentials*
+*secret*
+*api_key*
+
+# Security scanning reports
+bandit-report.json
+safety-report.json
+semgrep-report.json
+security-audit.log
+
 frontend/node_modules/.cache/default-development/4.pack
