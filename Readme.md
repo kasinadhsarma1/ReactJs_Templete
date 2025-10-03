@@ -398,7 +398,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 - [React](https://reactjs.org/) - The web framework used
 - [FastAPI](https://fastapi.tiangolo.com/) - Modern Python web framework
-- [shadcn/ui](https://ui.shadcn.com/) - Beautiful component library
+- [Radix/ui](https://www.radix-ui.com/themes/docs/overview/getting-started) - Beautiful component library
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [MongoDB](https://www.mongodb.com/) - Database
 
