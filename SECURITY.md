@@ -15,7 +15,7 @@ We take the security of our project seriously. If you discover a security vulner
 ### How to Report a Security Vulnerability
 
 1. **Do NOT create a public GitHub issue** for security vulnerabilities
-2. **Email us directly** at [your-email@example.com] with the subject line "Security Vulnerability Report"
+2. **Email us directly** at [kasinadhsarma@gmail.com] with the subject line "Security Vulnerability Report"
 3. **Include the following information:**
    - Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
    - Full paths of source file(s) related to the manifestation of the issue
