@@ -98,20 +98,26 @@ yarn install
 
 ### 4. Environment Configuration
 
-Create a `.env` file in the backend directory:
+Create a `.env` file in the backend directory (copy from `.env.example`):
 
 ```env
 MONGODB_URL=mongodb://localhost:27017/your_database
 DATABASE_NAME=your_database
 SECRET_KEY=your_secret_key_here
+JWT_SECRET_KEY=your_jwt_secret_key_here
 PORT=8000
+DEBUG=false
+ALLOWED_ORIGINS=http://localhost:3000
 ```
 
-Create a `.env` file in the frontend directory (if needed):
+Create a `.env` file in the frontend directory (copy from `.env.example`):
 
 ```env
 REACT_APP_API_URL=http://localhost:8000
+REACT_APP_ENABLE_DEBUG=false
 ```
+
+⚠️ **Security Note**: Never commit `.env` files to version control. Always use strong, unique secrets in production.
 
 ## 🚀 Running the Application
 
@@ -197,6 +203,17 @@ The template includes a comprehensive set of shadcn/ui components:
 - ✅ Type-safe API with Pydantic models
 - ✅ Easy to extend and customize
 - ✅ Production-ready structure
+- 🔒 **Comprehensive Security Features**
+  - Rate limiting and DDoS protection
+  - JWT authentication and authorization
+  - Input validation and sanitization
+  - Security headers and CORS configuration
+  - Dependency vulnerability scanning
+  - Environment variable protection
+  - Automated security auditing
+  - Password hashing with bcrypt
+  - SQL injection prevention
+  - XSS protection
 
 ## 💻 Development
 
@@ -258,6 +275,46 @@ FastAPI provides automatic interactive API documentation:
 - **Swagger UI**: `http://localhost:8000/docs`
 - **ReDoc**: `http://localhost:8000/redoc`
 - **OpenAPI JSON**: `http://localhost:8000/openapi.json`
+
+## 🔒 Security
+
+This template includes comprehensive security measures:
+
+### Security Features
+
+- **Authentication & Authorization**: JWT-based authentication with secure password hashing
+- **Rate Limiting**: API endpoints protected against brute force attacks
+- **Input Validation**: Comprehensive validation using Pydantic models
+- **Security Headers**: CORS, CSP, HSTS, and other security headers configured
+- **Dependency Security**: Regular vulnerability scanning with Dependabot
+- **Environment Protection**: Secure handling of sensitive configuration
+- **Audit Logging**: Comprehensive logging for security monitoring
+
+### Security Tools & Scripts
+
+- `scripts/security-audit.sh` - Comprehensive security audit script
+- `SECURITY.md` - Security policy and vulnerability reporting
+- Automated dependency scanning with npm audit and safety
+- Security linting with ESLint security plugin and Bandit
+
+### Running Security Audits
+
+```bash
+# Run comprehensive security audit
+./scripts/security-audit.sh
+
+# Frontend security checks
+cd frontend
+npm audit
+npm run security:check
+
+# Backend security checks  
+cd backend
+bandit -r .
+safety check
+```
+
+For more information, see our [Security Policy](SECURITY.md).
 
 ## 🧪 Testing
 
