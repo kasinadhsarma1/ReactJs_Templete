@@ -1,6 +1,6 @@
-# JavaScript Template
+# ReactJs Template
 
-A full-stack JavaScript application template with React frontend and FastAPI backend, featuring MongoDB integration.
+A full-stack JavaScript application template with React frontend and FastAPI backend, featuring MongoDB integration.There is no secret recipe beyond all are one.
 
 ## 📋 Table of Contents
 
